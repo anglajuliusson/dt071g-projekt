@@ -9,7 +9,7 @@ namespace rockPaperScissorsGame {
         public static void Main(string[] args)
     {
         Game game = new Game(); // Skapa spel-objekt
-        game.LoadResult(); // Läs in tidigare resultat vid start
+        game.LoadResults(); // Läs in tidigare resultat vid start
         bool running = true;
 
         while (running) 
@@ -29,7 +29,7 @@ namespace rockPaperScissorsGame {
 
         // Alternativ 2 - Visa tidigare resultat
         if (choice == "2") {
-            game.ShowResult();
+            game.ShowResults();
         }
 
         // Alternativ 4 - Avsluta program
@@ -38,14 +38,11 @@ namespace rockPaperScissorsGame {
         }
 
         // Ogiltigt alternativ
-        if (choice == default)
+        if (choice != "1" && choice != "2" && choice != "3") {
             Console.WriteLine("Ogiltigt val, försök igen!");
             break;
         }
     }
     }
-
-    public class Game {
-
     }
 }
