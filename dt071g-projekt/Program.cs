@@ -44,4 +44,8 @@ namespace rockPaperScissorsGame {
         }
     }
     }
+
+    public class Game {
+
+    }
 }
