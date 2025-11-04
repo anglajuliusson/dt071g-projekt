@@ -47,6 +47,73 @@ namespace rockPaperScissorsGame {
     }
 
     public class Game {
+        // Statistik på resultat
+
+        // Spelarens resultat
+        private int wins = 0; // Vinster
+        private int losses = 0; // Förluster
+        private int draws = 0; // Oavgjorda
+
+        // Skapar en instans av C#-klassen Random för att  slumpa datorns val
+        private Random random = new Random();
+
+        // Namnet på filen som används för att spara spelarens resultat
+        private string resultsFile = "results.txt";
+
+        // Ladda tidigare resultat
+        public void LoadResults()
+        {
+            try
+            {
+                // Kontrollera om filen finns
+                if (File.Exists(resultsFile))
+                {
+                    // Läs hela filens innehåll och dela upp med kommatecken
+                    string[] parts = File.ReadAllText(resultsFile).Split(',');
+
+                    // Kontrollera att filen innehåller exakt tre värden
+                    if (parts.Length == 3)
+                    {
+                        // Omvandla textvärden till heltal
+                        int.TryParse(parts[0], out wins);
+                        int.TryParse(parts[1], out losses);
+                        int.TryParse(parts[2], out draws);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Felmeddelande
+                Console.WriteLine($"Kunde inte läsa resultat: {ex.Message}");
+            }
+        }
+
+        // Spara resultat
+        private void SaveResults()
+        {
+            try
+            {
+                // Skriver över eller skapar filen med de aktuella värderna
+                File.WriteAllText(resultsFile, $"{wins},{losses},{draws}");
+            }
+            catch (Exception ex)
+            {
+                // Felmeddelande
+                Console.WriteLine($"Kunde inte spara statistik: {ex.Message}");
+            }
+        }
+
+        // Visa resultat
+
+        // Skriver ut tidiagre resultat till konsolen
+        public void ShowResults()
+        {
+            Console.WriteLine(); // Tom rad
+            Console.WriteLine("--- Tidigare resultat ---");
+            Console.WriteLine($"Vinster: {wins}");
+            Console.WriteLine($"Förluster: {losses}");
+            Console.WriteLine($"Oavgjort: {draws}");
+        }
 
         // Spela en match (bäst av tre)
         public void PlayRound()
@@ -103,12 +170,12 @@ namespace rockPaperScissorsGame {
             }
 
             // När någon nått 2 poäng är matchen över
-            if (playerScore > computerScore)
+            if (playerScore > computerScore) // Spelarens poäng är större än datorns
             {
                 Console.WriteLine("Du vann matchen!");
                 wins++; // Uppdatera den totala statistiken för vinster
             }
-            else
+            else if (playerScore < computerScore) // Spelarens poäng är mindre än datorns
             {
                 Console.WriteLine("Datorn vann matchen!");
                 losses++; // Uppdatera den totala statistiken för förlust
