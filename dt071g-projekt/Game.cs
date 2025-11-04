@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+
+namespace rockPaperScissorsGame {
+
 public class Game {
         // Statistik på resultat
 
@@ -199,3 +204,4 @@ public class Game {
             };
         }
     }
+}
