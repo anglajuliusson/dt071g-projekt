@@ -129,6 +129,9 @@ namespace rockPaperScissorsGame {
             // Loopa tills någon av spelarna får två vinster (bäst av tre)
             while (playerScore < 2 && computerScore < 2)
             {
+                Console.WriteLine(); // Tom rad
+                Console.WriteLine("Ny runda!");
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine("Välj: 1 = Sten, 2 = Sax, 3 = Påse");
                 string input = Console.ReadLine(); // Användarens val
 
