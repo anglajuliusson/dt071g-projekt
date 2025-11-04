@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "dt071g-projekt/1.0.0": {
+        "runtime": {
+          "dt071g-projekt.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "dt071g-projekt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/bin/Debug/net9.0/dt071g-projekt
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/bin/Debug/net9.0/dt071g-projekt.deps.json
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/bin/Debug/net9.0/dt071g-projekt.runtimeconfig.json
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/bin/Debug/net9.0/dt071g-projekt.dll
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/bin/Debug/net9.0/dt071g-projekt.pdb
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.AssemblyInfoInputs.cache
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.AssemblyInfo.cs
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.csproj.CoreCompileInputs.cache
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.sourcelink.json
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.dll
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/refint/dt071g-projekt.dll
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.pdb
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/dt071g-projekt.genruntimeconfig.cache
+/Users/admin/Desktop/DT071G - Programmering i C#.NET/Projekt/dt071g-projekt/dt071g-projekt/obj/Debug/net9.0/ref/dt071g-projekt.dll
