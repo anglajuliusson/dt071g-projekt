@@ -14,6 +14,7 @@ namespace rockPaperScissorsGame {
 
         while (running) 
         {
+        Console.WriteLine(); // Tom rad
         Console.WriteLine("=== STEN SAX PÅSE ===");
         Console.WriteLine("Välj ett alternativ: ");
         Console.WriteLine("1. Starta spel");
@@ -122,6 +123,7 @@ namespace rockPaperScissorsGame {
             int playerScore = 0; // Spelarens vinster i denna match
             int computerScore = 0; // Datorns vinster i denna match
 
+            Console.WriteLine(); // Tom rad
             Console.WriteLine("--- BÄST AV TRE ---");
 
             // Loopa tills någon av spelarna får två vinster (bäst av tre)
@@ -143,6 +145,7 @@ namespace rockPaperScissorsGame {
                 int computerChoice = random.Next(1, 4); // Random.Next(1,4) ger 1, 2 eller 3
 
                 // Visa vad både spelare och dator valde
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine($"Du valde {ChoiceToString(playerChoice)}");
                 Console.WriteLine($"Datorn valde {ChoiceToString(computerChoice)}");
 
@@ -152,36 +155,43 @@ namespace rockPaperScissorsGame {
                 // Hantera resultat av rundan
                 if (result == 1)
                 {
+                    Console.WriteLine(); // Tom rad
                     Console.WriteLine("Du vann rundan!");
                     playerScore++; // Öka spelarens poäng
                 }
                 else if (result == -1) // -1 = datorn vann
                 {
+                    Console.WriteLine(); // Tom rad
                     Console.WriteLine("Du förlorade rundan!");
                     computerScore++; // Öka datorns poäng
                 }
                 else // 0 = Oavgjort
                 {
+                    Console.WriteLine(); // Tom rad
                     Console.WriteLine("Oavgjort!");
                 }
 
                 // Visa aktuell ställning efter rundan
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine($"Ställning: Du {playerScore} - {computerScore} Datorn");
             }
 
             // När någon nått 2 poäng är matchen över
             if (playerScore > computerScore) // Spelarens poäng är större än datorns
             {
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine("Du vann matchen!");
                 wins++; // Uppdatera den totala statistiken för vinster
             }
             else if (playerScore < computerScore) // Spelarens poäng är mindre än datorns
             {
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine("Datorn vann matchen!");
                 losses++; // Uppdatera den totala statistiken för förlust
             }
             else 
             {
+                Console.WriteLine(); // Tom rad
                 Console.WriteLine("Det blev oavgjort!");
                 draws++; // Uppdatera den totala statistiken för oavgjorda matcher
             }
