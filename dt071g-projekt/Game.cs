@@ -64,7 +64,7 @@ public class Game {
 
         // Visa resultat
 
-        // Skriver ut tidiagre resultat till konsolen
+        // Skriver ut tidigare resultat till konsolen
         public void ShowResults()
         {
             Console.WriteLine(); // Tom rad
