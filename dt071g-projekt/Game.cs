@@ -63,6 +63,7 @@ public class Game {
         public void ShowResults()
         {
             Console.WriteLine(); // Tom rad
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("--- Tidigare resultat ---");
             Console.WriteLine($"Vinster: {wins}");
             Console.WriteLine($"Förluster: {losses}");
