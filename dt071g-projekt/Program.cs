@@ -42,7 +42,7 @@ namespace rockPaperScissorsGame {
         if (choice != "1" && choice != "2" && choice != "3") {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Ogiltigt val, försök igen!");
-            break;
+            continue;
         }
     }
     }
