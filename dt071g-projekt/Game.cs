@@ -11,7 +11,7 @@ public class Game {
         private int losses = 0; // Förluster
         private int draws = 0; // Oavgjorda
 
-        // Skapar en instans av C#-klassen Random för att  slumpa datorns val
+        // Skapar en instans av C#-klassen Random för att slumpa datorns val
         private Random random = new Random();
 
         // Namnet på filen som används för att spara spelarens resultat
