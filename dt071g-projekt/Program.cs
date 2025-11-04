@@ -14,6 +14,7 @@ namespace rockPaperScissorsGame {
         while (running) 
         {
         Console.WriteLine(); // Tom rad
+        Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("=== STEN SAX PÅSE ===");
         Console.WriteLine("Välj ett alternativ: ");
         Console.WriteLine("1. Starta spel");
@@ -39,6 +40,7 @@ namespace rockPaperScissorsGame {
 
         // Ogiltigt alternativ
         if (choice != "1" && choice != "2" && choice != "3") {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Ogiltigt val, försök igen!");
             break;
         }

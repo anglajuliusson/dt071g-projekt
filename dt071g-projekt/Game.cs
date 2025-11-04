@@ -36,6 +36,7 @@ public class Game {
             catch (Exception ex)
             {
                 // Felmeddelande
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"Kunde inte läsa resultat: {ex.Message}");
             }
         }
@@ -51,6 +52,7 @@ public class Game {
             catch (Exception ex)
             {
                 // Felmeddelande
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"Kunde inte spara statistik: {ex.Message}");
             }
         }
@@ -75,14 +77,17 @@ public class Game {
             int computerScore = 0; // Datorns vinster i denna match
 
             Console.WriteLine(); // Tom rad
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("--- BÄST AV TRE ---");
 
             // Loopa tills någon av spelarna får två vinster (bäst av tre)
             while (playerScore < 2 && computerScore < 2)
             {
                 Console.WriteLine(); // Tom rad
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Ny runda!");
                 Console.WriteLine(); // Tom rad
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Välj: 1 = Sten, 2 = Sax, 3 = Påse");
                 string input = Console.ReadLine(); // Användarens val
 
@@ -91,6 +96,7 @@ public class Game {
                 // Villkor: input kan inte vara tom, kan konverteras till int, mellan 1 och 3
                 if ( string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out int playerChoice) || playerChoice < 1 || playerChoice > 3)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Ogiltigt val! Försök igen.\n");
                     continue;
                 }
@@ -110,18 +116,21 @@ public class Game {
                 if (result == 1)
                 {
                     Console.WriteLine(); // Tom rad
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Du vann rundan!");
                     playerScore++; // Öka spelarens poäng
                 }
                 else if (result == -1) // -1 = datorn vann
                 {
                     Console.WriteLine(); // Tom rad
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Du förlorade rundan!");
                     computerScore++; // Öka datorns poäng
                 }
                 else // 0 = Oavgjort
                 {
                     Console.WriteLine(); // Tom rad
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Oavgjort!");
                 }
 
@@ -134,18 +143,21 @@ public class Game {
             if (playerScore > computerScore) // Spelarens poäng är större än datorns
             {
                 Console.WriteLine(); // Tom rad
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Du vann matchen!");
                 wins++; // Uppdatera den totala statistiken för vinster
             }
             else if (playerScore < computerScore) // Spelarens poäng är mindre än datorns
             {
                 Console.WriteLine(); // Tom rad
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Datorn vann matchen!");
                 losses++; // Uppdatera den totala statistiken för förlust
             }
             else 
             {
                 Console.WriteLine(); // Tom rad
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Det blev oavgjort!");
                 draws++; // Uppdatera den totala statistiken för oavgjorda matcher
             }
