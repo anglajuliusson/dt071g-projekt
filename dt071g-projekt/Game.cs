@@ -25,11 +25,14 @@ public class Game {
                 // Kontrollera om filen finns
                 if (File.Exists(resultsFile))
                 {
+                    // Läs hela filens innehåll
+                    string fileContent = File.ReadAllText(resultsFile);
+                    
                     // Kontrollera att filen inte är tom eller null
-                    if (!string.IsNullOrWhiteSpace(resultsFile))
+                    if (!string.IsNullOrWhiteSpace(fileContent))
                     {
-                    // Läs hela filens innehåll och dela upp med kommatecken
-                    string[] parts = File.ReadAllText(resultsFile).Split(',');
+                        // Dela upp innehållet med kommatecken
+                        string[] parts = fileContent.Split(',');
 
                     // Kontrollera att filen innehåller exakt tre värden
                     if (parts.Length == 3)
