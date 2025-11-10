@@ -25,6 +25,9 @@ public class Game {
                 // Kontrollera om filen finns
                 if (File.Exists(resultsFile))
                 {
+                    // Kontrollera att filen inte är tom eller null
+                    if (!string.IsNullOrWhiteSpace(resultsFile))
+                    {
                     // Läs hela filens innehåll och dela upp med kommatecken
                     string[] parts = File.ReadAllText(resultsFile).Split(',');
 
@@ -37,6 +40,7 @@ public class Game {
                         int.TryParse(parts[2], out draws);
                     }
                 }
+            }
             }
             catch (Exception ex)
             {
@@ -103,7 +107,7 @@ public class Game {
                 if ( string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out int playerChoice) || playerChoice < 1 || playerChoice > 3)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Ogiltigt val! Försök igen.\n");
+                    Console.WriteLine("Ogiltigt val! Försök igen.");
                     continue;
                 }
 
